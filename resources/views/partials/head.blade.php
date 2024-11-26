@@ -3,7 +3,7 @@
     <title>TASAlink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Organiser" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Dataforming" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
 
