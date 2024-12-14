@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Priority;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class PriorityController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $priorities = Priority::all()->sortByDesc('name');
-        return view('priority.index', compact('priorities'));
-        // return view('priority.index');
+        return view('blog.index');
     }
 
     /**
@@ -22,7 +20,7 @@ class PriorityController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -30,14 +28,13 @@ class PriorityController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate(['name' => ['required']]);
-        Priority::create($validated);
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Blog $blog)
     {
         //
     }
@@ -45,7 +42,7 @@ class PriorityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -53,7 +50,7 @@ class PriorityController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -61,7 +58,7 @@ class PriorityController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Blog $blog)
     {
         //
     }

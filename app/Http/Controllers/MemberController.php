@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Priority;
 use Illuminate\Http\Request;
+use App\Models\Member;
 
-class PriorityController extends Controller
+class MemberController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $priorities = Priority::all()->sortByDesc('name');
-        return view('priority.index', compact('priorities'));
-        // return view('priority.index');
+        return view('members.index');
     }
 
     /**
@@ -30,8 +28,7 @@ class PriorityController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate(['name' => ['required']]);
-        Priority::create($validated);
+        //
     }
 
     /**

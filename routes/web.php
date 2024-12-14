@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PriorityController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,7 +20,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+Route::resource('blog', BlogController::class);
+
 Route::resource('priority', PriorityController::class);
+
+Route::resource('member', MemberController::class);
+
+
 
 });
 

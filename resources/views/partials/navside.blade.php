@@ -158,6 +158,12 @@
 
 
 
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="{{ route('blog.index') }}">
+                                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Blog</span>
+                            </a>
+                        </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="widgets.html">
