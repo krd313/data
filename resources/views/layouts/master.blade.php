@@ -4,6 +4,7 @@
     @include('partials.head')
 
 <body>
+
     @include('partials.navtop')
 
 
@@ -17,8 +18,25 @@
         <!-- ============================================================== -->
         <div class="main-content">
 
+
+
             <div class="page-content">
+
+                <div>
+                    @session('success')
+
+
+                    <div class="alert alert-success alert-dismissible shadow fade show" role="alert">{{ session('success') }}</div>
+                    @endsession
+                </div>
+
+
+
+
                 <div class="container-fluid">
+
+
+
 
                     @yield('content')
 
@@ -51,7 +69,6 @@
 
 
     @include('partials.script')
-
 
 </body>
 

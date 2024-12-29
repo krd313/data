@@ -27,7 +27,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
                 <!-- Dark Logo-->
-                <a href="index.html" class="logo logo-dark">
+                <a href="{{ route('dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
@@ -36,7 +36,7 @@
                     </span>
                 </a>
                 <!-- Light Logo-->
-                <a href="index.html" class="logo logo-light">
+                <a href="{{ route('dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
@@ -71,6 +71,14 @@
                                 </ul>
                             </div>
                         </li> <!-- end Dashboard Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#">
+                                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Task</span>
+                            </a>
+                        </li>
+
+
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
                                 <i class="mdi mdi-view-grid-plus-outline"></i> <span data-key="t-apps">Projects</span>
@@ -79,6 +87,13 @@
                                 <ul class="nav nav-sm flex-column">
 
 
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link" data-key="t-api-key">Tasks</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('category.index') }}" class="nav-link" data-key="t-api-key">Category</a>
+                                    </li>
 
                                     <li class="nav-item">
                                         <a href="{{ route('priority.index') }}" class="nav-link" data-key="t-api-key">Priority</a>

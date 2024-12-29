@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Priority extends Model
+class Category extends Model
 {
-    use HasFactory;
-    protected $fillable = ['user_id','name','number', 'color'];
+    // use HasFactory;
+    protected $fillable = ['user_id','name','description', 'color'];
 }

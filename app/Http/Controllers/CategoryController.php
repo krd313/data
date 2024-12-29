@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\Priority;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class PriorityController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $priorities = Priority::orderBy('number', 'desc')->get();
-        return view('priority.index', compact('priorities'));
+        $categories = Category::orderBy('created_at', 'desc')->get();
+        return view('category.index', compact('categories'));
     }
 
     /**
@@ -23,7 +22,7 @@ class PriorityController extends Controller
      */
     public function create()
     {
-        return view('priority.create');
+        return view('category.create');
     }
 
     /**
@@ -32,60 +31,58 @@ class PriorityController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'number' => 'required|string',
             'name' => 'required|string',
+            'description' => 'nullable|string',
             'color' => 'required|string',
         ]);
-
-        // Manually add the authenticated user's ID
         $data['user_id'] = Auth::id();
 
-        Priority::create($data);
+        Category::create($data);
 
-        return to_route('priority.index')->with('success', 'Priority created successfully.');
+        return redirect()->route('category.index')->with('success', 'Category created successfully.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Category $category)
     {
-        return view('priority.show');
+        //
     }
+
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Priority $priority)
+    public function edit(Category $category)
     {
-        return view('priority.edit', compact('priority'));
+        return view('category.edit', compact('category'));
     }
-
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Priority $priority)
+    public function update(Request $request, Category $category)
     {
         $data = $request->validate([
-            'number' => 'required|string',
             'name' => 'required|string',
+            'description' => 'nullable|string',
             'color' => 'required|string',
         ]);
+        $data['user_id'] = Auth::id();
 
+        $category->update($data);
 
-        $priority->update($data);
-
-        return to_route('priority.index')->with('success', 'Priority updated successfully.');
+        return redirect()->route('category.index')->with('success', 'Category cupdated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Priority $priority)
+    public function destroy(Category $category)
     {
-        $priority->delete();
+        $category->delete();
 
-        return to_route('priority.index')->with('success', 'Priority Deleted successfully.');
+        return redirect()->route('category.index')->with('success', 'Category deleted successfully.');
     }
 }

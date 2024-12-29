@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PriorityController;
 
 
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
 Route::resource('blog', BlogController::class);
 
 Route::resource('priority', PriorityController::class);
+Route::resource('category', CategoryController::class);
 
 Route::resource('member', MemberController::class);
 
