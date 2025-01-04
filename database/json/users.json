@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "midas",
+        "email": "midas@gmail.com",
+        "password": "$4$3Q"
+
+
+    },
+    {
+        "name": "Medium",
+        "number": 6,
+        "color": "#0002ff"
+    },
+    {
+        "name": "High",
+        "number": 10,
+        "color": "#ff0000"
+    }
+]

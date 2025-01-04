@@ -16,12 +16,24 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test',
-            'email' => 'test@gmail.com',
-            'password' => bcrypt('password')
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test',
+        //     'email' => 'test@gmail.com',
+        //     'password' => bcrypt('password')
+        // ]);
         // Blog data seeding
-        Blog::factory(100)->create();
+
+
+        $this->call([
+            UserSeeder::class,
+            PrioritySeeder::class,
+
+
+
+        ]);
+
+        // Blog::factory(100)->create();
     }
+
+
 }

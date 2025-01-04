@@ -73,7 +73,7 @@
                         </li> <!-- end Dashboard Menu -->
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="{{ route('task.index') }}">
                                 <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Task</span>
                             </a>
                         </li>

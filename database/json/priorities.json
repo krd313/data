@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Low",
+        "number": 1,
+        "color": "#00ff00"
+    },
+    {
+        "name": "Medium",
+        "number": 5,
+        "color": "#daa534"
+    },
+    {
+        "name": "High",
+        "number": 10,
+        "color": "#ff0000"
+    }
+]

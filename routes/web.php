@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
@@ -25,6 +26,7 @@ Route::resource('blog', BlogController::class);
 
 Route::resource('priority', PriorityController::class);
 Route::resource('category', CategoryController::class);
+Route::resource('task', TaskController::class);
 
 Route::resource('member', MemberController::class);
 
