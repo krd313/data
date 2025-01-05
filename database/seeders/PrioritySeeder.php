@@ -13,7 +13,7 @@ class PrioritySeeder extends Seeder
      */
     public function run(): void
     {
-        $json = file_get_contents(base_path('database/json/priorities.json'));
+        $json = file_get_contents(base_path('database/data/priorities.json'));
         $posts = collect(json_decode($json, true));
 
         $posts->each(function ($post) {
