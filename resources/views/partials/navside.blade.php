@@ -62,7 +62,7 @@
                             <div class="collapse menu-dropdown" id="sidebarDashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="dashboard-analytics.html" class="nav-link" data-key="t-analytics"> Analytics </a>
+                                        <a href="{{ route('dashboard') }}" class="nav-link" data-key="t-analytics">Articules </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="dashboard-crm.html" class="nav-link" data-key="t-crm"> CRM </a>
@@ -71,6 +71,12 @@
                                 </ul>
                             </div>
                         </li> <!-- end Dashboard Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="{{ route('articles.index') }}">
+                                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Articles</span>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="{{ route('task.index') }}">

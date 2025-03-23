@@ -19,10 +19,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
+        <!-- Other body elements -->
+        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
 
     <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
+
+    <!-- init js -->
+    <script src="{{ asset('backend/assets/js/pages/form-advanced.init.js') }}"></script>
+
+        <!-- prismjs plugin -->
+        <script src="{{ asset('backend/assets/libs/prismjs/prism.js') }}"></script>
     <!-- App js -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+
+
 
 
 

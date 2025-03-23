@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 
+       <!-- Other head elements -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 
     <!-- Layout config Js -->
     <script src="{{ asset('backend/assets/js/layout.js') }}"></script>

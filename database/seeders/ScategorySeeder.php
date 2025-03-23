@@ -15,9 +15,9 @@ class ScategorySeeder extends Seeder
     public function run(): void
     {
         $json = File::get('database/data/scategories.json');
-        $categories = collect(json_decode($json, true));
+        $scategories = collect(json_decode($json, true));
 
-        $categories->each(function($scategory) {
+        $scategories->each(function($scategory) {
             Scategory::create([
                 'name' => $scategory['name'],
                 'description' => $scategory['description'],
